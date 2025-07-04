@@ -5,6 +5,7 @@
 package com.dht.services;
 
 import com.dht.pojo.Category;
+import com.dht.pojo.Level;
 import com.dht.utils.JdbcConnector;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,14 +13,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import com.dht.pojo.Level;
 
 /**
  *
  * @author admin
  */
-public class LevelService {
-
+public class LevelServices {
     public List<Level> getLevels() throws SQLException {
         Connection conn = JdbcConnector.getInstance().connect();
         Statement stm = conn.createStatement();
@@ -30,6 +29,7 @@ public class LevelService {
             int id = rs.getInt("id");
             String name = rs.getString("name");
             String note = rs.getString("note");
+
             Level c = new Level(id, name, note);
             levels.add(c);
         }

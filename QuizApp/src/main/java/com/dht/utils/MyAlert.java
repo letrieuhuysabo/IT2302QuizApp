@@ -30,4 +30,9 @@ public class MyAlert {
         this.alert.setContentText(message);
         this.alert.showAndWait();
     }
+    public void showMsg(String message, Alert.AlertType t) {
+        alert.setAlertType(t);
+        this.alert.setContentText(message);
+        this.alert.showAndWait();
+    }
 }

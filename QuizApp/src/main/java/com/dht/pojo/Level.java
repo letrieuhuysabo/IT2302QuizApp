@@ -10,7 +10,8 @@ package com.dht.pojo;
  */
 public class Level {
     private int id;
-    private String name, note;
+    private String name;
+    private String note;
 
     public Level(int id, String name, String note) {
         this.id = id;
@@ -23,6 +24,8 @@ public class Level {
         return this.name; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
     
+    
+
     /**
      * @return the id
      */
@@ -64,5 +67,4 @@ public class Level {
     public void setNote(String note) {
         this.note = note;
     }
-    
 }
